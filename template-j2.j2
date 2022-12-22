@@ -1,0 +1,18 @@
+The OS family of this server is : {{ ansible_os_family }}
+
+
+The IPV4 address of this server is : {{ansible_all_ipv4_addresses}}
+
+The total memory is {{ ansible_memtotal_mb }}
+
+My Python version is {{ ansible_python_version }}
+
+package name is {{ package_name }}
+
+
+
+{% if ansible_memtotal_mb >= 900 %}
+Memory is huge
+{% else %}
+Memory is small
+{% endif %}

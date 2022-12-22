@@ -1,0 +1,29 @@
+- hosts: all
+  become_user: root
+  become_method: sudo
+  become: yes
+
+  tasks:
+    - name: Install the package for ubuntu
+      apt: 
+        name: "{{item}}" 
+        state: present
+      when: ansible_distribution=="Ubuntu"   
+      loop:
+        - wget
+        - ntp
+        - git
+        - zip
+        - unzip
+
+    - name: Install the package for Redhat
+      yum: 
+        name: "{{item}}"
+        state: present
+      when: ansible_distribution=="RedHat"   
+      loop:
+        - wget
+        - chrony
+        - git
+        - zip
+        - unzip    

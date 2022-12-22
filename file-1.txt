@@ -1,0 +1,15 @@
+total 88
+-rw-r--r-- 1 root root 38336 Dec 14 02:06 ansible.cfg
+-rw-r--r-- 1 root root   301 Dec 22 02:16 command-module.yaml
+-rw-r--r-- 1 root root     0 Dec 22 02:20 file-1.txt
+drwxr-xr-x 2 root root  4096 Dec 16 02:18 files-1
+-rw-r--r-- 1 root root  1033 Dec 16 02:13 handlers.yaml
+-rw-r--r-- 1 root root   206 Dec 16 02:52 hosts
+-rw-r--r-- 1 root root   518 Dec 15 02:20 install-apache.yaml
+-rw-r--r-- 1 root root   556 Dec 19 02:09 loop.yaml
+-rw-r--r-- 1 root root   108 Dec 21 01:54 role-apache.yaml
+drwxr-xr-x 4 root root  4096 Dec 21 01:50 roles
+-rw-r--r-- 1 root root   884 Dec 16 03:08 setup-demo-ntp-install.yaml
+-rw-r--r-- 1 root root   268 Dec 21 02:26 template-demo.yaml
+-rw-r--r-- 1 root root   355 Dec 22 01:54 template-j2.j2
+-rw-r--r-- 1 root root   683 Dec 15 02:39 var-install-apache.yaml

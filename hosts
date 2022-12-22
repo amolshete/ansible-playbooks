@@ -1,0 +1,14 @@
+
+
+
+# Ex 2: A collection of hosts belonging to the 'webservers' group:
+
+[webservers]
+172.31.39.30 ansible_user=ubuntu
+172.31.38.255 ansible_user=ubuntu
+
+[REDHATservers]
+172.31.9.40 ansible_user=ec2-user
+ 
+
+

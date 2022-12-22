@@ -1,0 +1,38 @@
+- hosts: all
+  become_user: root
+  become_method: sudo
+  become: yes
+
+  vars:
+    package_name: ntp
+    service_name: ntp
+    
+
+  tasks:
+     - name: install ntp on remote ubuntu server
+       apt:
+         name: "{{package_name}}"
+         update_cache: yes
+         state: latest
+       when: ansible_distribution=="Ubuntu"  
+     - name: enable the service on ubuntu
+       service:
+           enabled: true
+           name: "{{service_name}}"
+           state: started
+       when: ansible_distribution=="Ubuntu"  
+
+
+     - name: install ntp on remote redhat server
+       yum:
+         name: chrony
+         update_cache: yes
+         state: latest
+       when: ansible_distribution=="RedHat" 
+     - name: enable the service on redhat
+       service:
+           enabled: true
+           name: chronyd
+           state: started
+       when: ansible_distribution=="RedHat" 
+     
